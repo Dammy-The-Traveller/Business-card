@@ -1,0 +1,48 @@
+:root {
+    --black: rgb(54, 65, 69);
+    --black-04: rgba(54, 65, 69, 0.04);
+    --black-30: rgba(54, 65, 69, 0.3);
+    --accent: #00A5EC;
+}
+
+body {
+    box-sizing: border-box;
+    padding: 2rem;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    min-height: 100vh;
+}
+
+
+
+body.no-reference {
+    grid-template-columns: 2fr 1fr;
+}
+
+
+.learn {
+    border: 1px groove var(--black-30);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    background-color: var(--black-04);
+    max-width: 95%;
+    padding: 2rem;
+    position: relative;
+    border-radius: 4px;
+    margin-top: 3rem;
+}
+
+.learn::before {
+    background-color: var(--accent);
+    background-color: var(--black);
+    max-width: calc(100% - 2rem);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
